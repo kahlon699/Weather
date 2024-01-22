@@ -1,0 +1,9 @@
+
+{
+    "greeting":"Welcome to Weather App",
+    "btnGetWeather":"Get weather",
+    "txtEnterCity":"Enter City",
+    "temperature": "Temperature",
+    "description":"Description"
+  }
+  
