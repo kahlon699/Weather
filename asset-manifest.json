@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/kahlon699/Weather/static/css/main.f855e6bc.css",
+    "main.js": "/kahlon699/Weather/static/js/main.82b60d8d.js",
+    "static/js/787.42650831.chunk.js": "/kahlon699/Weather/static/js/787.42650831.chunk.js",
+    "index.html": "/kahlon699/Weather/index.html",
+    "main.f855e6bc.css.map": "/kahlon699/Weather/static/css/main.f855e6bc.css.map",
+    "main.82b60d8d.js.map": "/kahlon699/Weather/static/js/main.82b60d8d.js.map",
+    "787.42650831.chunk.js.map": "/kahlon699/Weather/static/js/787.42650831.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.82b60d8d.js"
+  ]
+}
