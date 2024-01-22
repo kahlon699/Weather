@@ -45,7 +45,7 @@ const WeatherApp = (locale) => {
       {weather && (
         <div>
           <h2>{weather.name}, {weather.sys.country}</h2>
-          <p>{get('temperature')}: {Math.round(weather.main.temp)} °C</p>
+        
           <p> <div>
           <h5><img id="wicon" src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}  alt="Weather Icon" /></h5>
             
@@ -54,6 +54,18 @@ const WeatherApp = (locale) => {
           {get('description')}: {weather.weather[0].description}
           </div>
             </p>
+            <p>{get('temperature')}: {Math.round(weather.main.temp)} °C</p>
+            <p>{get('feels_like')}: {Math.round(weather.main.feels_like)} °C</p>
+            <p>{get('temp_min')}: {Math.round(weather.main.temp_min)} °C</p>
+            <p>{get('temp_max')}: {Math.round(weather.main.temp_max)} °C</p>
+            <p>{get('pressure')}: {Math.round(weather.main.pressure)} Pa</p>
+
+            <p>{get('visibility')}: {Math.round(weather.visibility)} m</p>
+            <p>{get('wind')}:</p>
+            <p>{get('speed')}: {Math.round(weather.wind.speed)} km/s</p>
+            <p>{get('deg')}: {Math.round(weather.wind.deg)} °NW</p>
+          
+
         </div>
       )}
     </div>

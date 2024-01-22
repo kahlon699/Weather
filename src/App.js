@@ -11,7 +11,7 @@ const locales = {
 function determineLocale() {
   // Implement your logic to determine the current locale (e.g., from user preferences or browser settings)
   // For simplicity, we'll return 'en' for English in this example
-  return 'en';
+  return 'pa';
 }
 
 

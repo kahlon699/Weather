@@ -3,6 +3,14 @@
     "greeting":"ਮੌਸਮ ਐਪ ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ",
     "btnGetWeather":"ਮੌਸਮ ਪ੍ਰਾਪਤ ਕਰੋ",
     "txtEnterCity":"ਸ਼ਹਿਰ ਦਾ ਨਾਮ ਦਰਜ ਕਰੋ",
+    "description":"ਵਰਣਨ",
     "temperature": "ਤਾਪਮਾਨ",
-    "description":"ਵਰਣਨ"
+    "feels_like": "ਵਰਗੇ ਮਹਿਸੂਸ",
+    "temp_min": "ਘੱਟੋ-ਘੱਟ",
+    "temp_max": "ਅਧਿਕਤਮ",
+    "pressure": "ਦਬਾਅ",
+    "visibility": "ਦਿੱਖ",
+    "wind": "ਹਵਾ",
+    "speed":"ਗਤੀ",
+    "deg":"ਡਿਗਰੀ"
   }

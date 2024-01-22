@@ -3,7 +3,15 @@
     "greeting":"Welcome to Weather App",
     "btnGetWeather":"Get weather",
     "txtEnterCity":"Enter City",
+    "description":"Description",
     "temperature": "Temperature",
-    "description":"Description"
+    "feels_like": "Feel Like",
+    "temp_min": "Min",
+    "temp_max": "Max",
+    "pressure": "Pressure",
+    "visibility": "Visibility",
+    "wind": "Wind",
+    "speed":"Speed",
+    "deg":"Degree"
   }
   
