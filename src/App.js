@@ -11,29 +11,37 @@ const locales = {
 function determineLocale() {
   // Implement your logic to determine the current locale
   // For simplicity, we'll return 'pa' for Punjabi in this example
-  return 'pa';
+  return 'en';
 }
 
 function App() {
   const [currentLocale, setCurrentLocale] = useState(determineLocale());
-
   console.log('Rendering with Locale:', currentLocale);
 
   useEffect(() => {
-    const locale = determineLocale();
-    console.log('Current Locale:', locale);
+    initializeLocale();
+  }, [currentLocale]);
 
+  const initializeLocale = () => {
     init({
-      currentLocale: locale,
+      currentLocale,
       locales,
     });
-
     console.log('Locales initialized');
-    setCurrentLocale(locale);
-  }, []);
+  };
+
+  const toggleLocale = () => {
+    const newLocale = currentLocale === 'en' ? 'pa' : 'en';
+    setCurrentLocale(newLocale);
+  };
 
   return (
     <div className="App">
+      <div>
+        <button onClick={toggleLocale}>
+          {currentLocale === 'en' ? 'Switch to Punjabi' : 'Switch to English'}
+        </button>
+      </div>
       <WeatherApp locale={currentLocale} />
     </div>
   );
