@@ -1,35 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import WeatherApp from './Weather';
-import {  init } from 'react-intl-universal';
-
+import { init } from 'react-intl-universal';
 
 const locales = {
-  en: require('./locales/en.json'), // Replace with the actual path to your English translations
-  pa: require('./locales/pa.json'), // Replace with the actual path to your Punjabi translations
+  en: require('./locales/en.json'),
+  pa: require('./locales/pa.json'),
 };
+
 function determineLocale() {
-  // Implement your logic to determine the current locale (e.g., from user preferences or browser settings)
-  // For simplicity, we'll return 'en' for English in this example
+  // Implement your logic to determine the current locale
+  // For simplicity, we'll return 'pa' for Punjabi in this example
   return 'pa';
 }
 
-
 function App() {
+  const [currentLocale, setCurrentLocale] = useState(determineLocale());
+
+  console.log('Rendering with Locale:', currentLocale);
+
   useEffect(() => {
-    const currentLocale = determineLocale();
-    console.log('Current Locale:', currentLocale);
+    const locale = determineLocale();
+    console.log('Current Locale:', locale);
 
     init({
-      currentLocale,
+      currentLocale: locale,
       locales,
     });
 
     console.log('Locales initialized');
+    setCurrentLocale(locale);
   }, []);
-
-  const currentLocale = determineLocale();
-  console.log('Rendering with Locale:', currentLocale);
 
   return (
     <div className="App">
