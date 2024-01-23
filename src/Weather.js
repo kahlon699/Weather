@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import axios from 'axios';
-import { get } from 'react-intl-universal';
+import intl,{get } from 'react-intl-universal';
 const WeatherApp = (locale) => {
   const [greeting, setGreeting] = useState('');
   const [btnGetWeather, setbtnGetWeather] = useState('');
@@ -14,9 +14,9 @@ const WeatherApp = (locale) => {
 
   useEffect(() => { 
     // Set initial values for greeting and buttontext
-    setGreeting(get('greeting'));
-    setbtnGetWeather(get('btnGetWeather'));
-    settxtEnterCity(get('txtEnterCity'));
+    setGreeting(intl.get('greeting'));
+    setbtnGetWeather(intl.get('btnGetWeather'));
+    settxtEnterCity(intl.get('txtEnterCity'));
   }, [locale]);
 
 
