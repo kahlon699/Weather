@@ -8,6 +8,7 @@ const WeatherApp = ({locale}) => {
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState(null);
   const apiKey = 'c03664bedb1f9d07ca52d9ed9bbe60e3';
+  const imageUrl = process.env.PUBLIC_URL ;
 
   useEffect(() => { 
     // Set initial values for greeting and buttontext
@@ -20,7 +21,7 @@ const WeatherApp = ({locale}) => {
         pa: require('./locales/pa.json'),
       },
     });
-    
+
     setGreeting(intl.get('greeting'));
     setbtnGetWeather(intl.get('btnGetWeather'));
     settxtEnterCity(intl.get('txtEnterCity'));
@@ -39,8 +40,9 @@ const WeatherApp = ({locale}) => {
     }
   };
   return (
+    // <div style={{ backgroundImage: `url(${imageUrl  + '/img/background.jpg'})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
     <div>
-      <h1>{greeting}</h1>
+    <h1>{greeting}</h1>
       <input
         type="text"
         placeholder={txtEnterCity}
@@ -51,7 +53,7 @@ const WeatherApp = ({locale}) => {
       {weather && (
         <div>
           <h2>{weather.name}, {weather.sys.country}</h2>
-          <h5><img id="wicon" src={`http://openweathermap.org/img/w/${weather.weather[0].icon}.png`}  alt="Weather Icon" /></h5>   
+          <h5><img id="wicon" width="50px" src={imageUrl + '/img/' + weather.weather[0].icon + '.png'}  alt="Weather Icon" /></h5>   
           <p> 
           {intl.get('description')}: {weather.weather[0].description}         
             </p>
