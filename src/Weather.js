@@ -40,13 +40,23 @@ const WeatherApp = ({locale}) => {
     }
   };
 
-  const getFontSize = () => {
+  const getFontSizeTitle = () => {
     const userLocale = locale;
 
     if (userLocale.startsWith('en')) {
-      return '40px';
+      return '48px';
     } else if (userLocale.startsWith('pa')) {
-      return '40px';
+      return '43px';
+    }
+  };
+    
+  const getFontSizeBody = () => {
+    const userLocale = locale;
+
+    if (userLocale.startsWith('en')) {
+      return '19px';
+    } else if (userLocale.startsWith('pa')) {
+      return '18px';
     }
   };
     
@@ -55,7 +65,7 @@ const WeatherApp = ({locale}) => {
     // <div style={{ backgroundImage: `url(${imageUrl  + '/img/background.jpg'})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
     <div>
        <div style={{ height: "180px"}}>
-    <h1 style={{ fontSize: getFontSize() }}>{greeting}</h1>
+    <h1 style={{ fontSize: getFontSizeTitle() }}>{greeting}</h1>
       <input
         type="text"
         placeholder={txtEnterCity}
@@ -65,7 +75,7 @@ const WeatherApp = ({locale}) => {
       <button onClick={getWeatherData}>{btnGetWeather}</button>
       </div>
       {weather && (
-        <div className="weather-card" id="weatherCard" >
+        <div className="weather-card" id="weatherCard" style={{ fontSize: getFontSizeBody() }}>
           <h2>{weather.name}, {weather.sys.country}</h2>
           <h5><img id="wicon" width="50px" src={imageUrl + '/img/' + weather.weather[0].icon + '.png'}  alt="Weather Icon" /></h5>   
           <p> 
