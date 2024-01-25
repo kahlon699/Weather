@@ -35,6 +35,9 @@ function App() {
     setCurrentLocale(newLocale);
   };
 
+
+    
+
   return (
     <div className="App">
       <div>

@@ -44,17 +44,17 @@ const WeatherApp = ({locale}) => {
     const userLocale = locale;
 
     if (userLocale.startsWith('en')) {
-      return '36px';
+      return '40px';
     } else if (userLocale.startsWith('pa')) {
-      return '30px';
+      return '40px';
     }
-
-    
   };
+    
 
   return (
     // <div style={{ backgroundImage: `url(${imageUrl  + '/img/background.jpg'})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
     <div>
+       <div style={{ height: "180px"}}>
     <h1 style={{ fontSize: getFontSize() }}>{greeting}</h1>
       <input
         type="text"
@@ -63,8 +63,9 @@ const WeatherApp = ({locale}) => {
         onChange={(e) => setCity(e.target.value)}
       />
       <button onClick={getWeatherData}>{btnGetWeather}</button>
+      </div>
       {weather && (
-        <div className="weather-card" id="weatherCard">
+        <div className="weather-card" id="weatherCard" >
           <h2>{weather.name}, {weather.sys.country}</h2>
           <h5><img id="wicon" width="50px" src={imageUrl + '/img/' + weather.weather[0].icon + '.png'}  alt="Weather Icon" /></h5>   
           <p> 
