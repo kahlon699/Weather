@@ -39,10 +39,23 @@ const WeatherApp = ({locale}) => {
       console.error('Error fetching weather data:', error);
     }
   };
+
+  const getFontSize = () => {
+    const userLocale = locale;
+
+    if (userLocale.startsWith('en')) {
+      return '36px';
+    } else if (userLocale.startsWith('pa')) {
+      return '30px';
+    }
+
+    
+  };
+
   return (
     // <div style={{ backgroundImage: `url(${imageUrl  + '/img/background.jpg'})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
     <div>
-    <h1>{greeting}</h1>
+    <h1 style={{ fontSize: getFontSize() }}>{greeting}</h1>
       <input
         type="text"
         placeholder={txtEnterCity}
@@ -51,7 +64,7 @@ const WeatherApp = ({locale}) => {
       />
       <button onClick={getWeatherData}>{btnGetWeather}</button>
       {weather && (
-        <div>
+        <div className="weather-card" id="weatherCard">
           <h2>{weather.name}, {weather.sys.country}</h2>
           <h5><img id="wicon" width="50px" src={imageUrl + '/img/' + weather.weather[0].icon + '.png'}  alt="Weather Icon" /></h5>   
           <p> 

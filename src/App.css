@@ -1,5 +1,12 @@
 .App {
+  background-color: #bb6b66;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(99, 10, 10, 0.1);
+  width: 97%;
+  max-width: 400px;
   text-align: center;
+  height: 712px; /* Set the height of the container */
 }
 
 .App-logo {
@@ -14,7 +21,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #395da3;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

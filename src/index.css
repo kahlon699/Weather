@@ -1,8 +1,11 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;      
+      background-color: #f0f0f0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +13,35 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+button
+{
+  padding: 10px;
+      background-color: #929dd8;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+}
+button:hover {
+      background-color: #7483d6;
+
+}
+
+.weather-card {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #aaaabe;
+  border-radius: 5px;
+  color: #fff;
+}
+input[type="text"] {
+  border-radius: 10px;
+  padding:4px;
+  font-size: medium;
+ 
+}
+
+h1 {
+  color: #f5f1f1;
 }
