@@ -46,7 +46,7 @@ const WeatherApp = ({locale}) => {
     if (userLocale.startsWith('en')) {
       return '49px';
     } else if (userLocale.startsWith('pa')) {
-      return '44px';
+      return '46px';
     }
   };
     
