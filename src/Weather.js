@@ -65,7 +65,7 @@ const WeatherApp = ({locale}) => {
     // <div style={{ backgroundImage: `url(${imageUrl  + '/img/background.jpg'})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
     <div>
        <div style={{ height: "180px"}}>
-    <h1 style={{ fontSize: getFontSizeTitle() }}>{greeting}</h1>
+    <h1 style={{ fontSize: getFontSizeTitle(),paddingBottom:'5px'}}>{greeting}</h1>
       <input
         type="text"
         placeholder={txtEnterCity}

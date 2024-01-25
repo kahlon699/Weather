@@ -36,7 +36,7 @@ function App() {
   };
 
 
-    
+  const imageUrl = process.env.PUBLIC_URL ;
 
   return (
     <div className="App">
@@ -44,6 +44,10 @@ function App() {
         <button onClick={toggleLocale}>
           {currentLocale === 'en' ? 'Switch to Punjabi' : 'Switch to English'}
         </button>
+      </div>
+      <div className="App-logo"  >
+      <img  src={imageUrl + '/logo192.png'} className="logo" />    
+
       </div>
       <WeatherApp locale={currentLocale} />
     </div>
